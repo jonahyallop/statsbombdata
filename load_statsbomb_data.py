@@ -1,19 +1,7 @@
 from statsbombpy import sb
 
-print(sb.competitions())
+competitions = sb.competitions()
 
-events = sb.competition_events(
-    country="Germany",
-    division="1. Bundesliga",
-    season="2019/2020"
-)
+matches = sb.matches(competition_id=9, season_id=42)
 
-# grouped_events = sb.competition_events(
-#     country="Germany",
-#     division= "1. Bundesliga",
-#     season="2019/2020",
-#     split=True
-# )
-# grouped_events["dribbles"]
-
-print(events)
+print(matches)
